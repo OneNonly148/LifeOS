@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
@@ -14,13 +15,15 @@ import {MatButtonModule, MatCheckboxModule, MatCardModule, MatToolbarModule,
   MatInputModule, MatFormFieldModule, MatSelectModule} from '@angular/material'; //import angular material components
 
 const routes: Routes = [
-  { path: 'main', component: AppComponent},
+  { path: '', component: MainpageComponent},
   { path: 'dashboard', component: DashboardComponent }
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,
